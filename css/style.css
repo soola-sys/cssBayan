@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f4f4f4;
+    height: 100%;
+    font-style: normal;
+    display: flex;
+    font-size: 18px;
+    font-family: 'Sono', sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: auto;
+    padding: 0 15px;
+    text-align: left;
+    margin-top: 5%;
+}
+
+.title {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 3rem;
+    color : #0a2240;
+    border-bottom: 2px solid #b1c2d6;
+}
+.accordion {
+    overflow: hidden;
+}
