@@ -111,11 +111,15 @@ body {
 .accordion:hover .accordion__input:not(:checked) ~ .accordion__label {
     color : #0a2240;
 }
-
+@media only screen and (max-width : 1920px){
+    .container {
+        width: 100%;
+    }
+}
 
 @media only screen and (max-width : 767px){
     .container {
-        width: 100%;
+        width: 75%;
     }
 }
 
