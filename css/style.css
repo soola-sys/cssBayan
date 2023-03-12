@@ -102,3 +102,7 @@ body {
 .accordion__input:checked ~ .accordion__label {
     color : #0a2240;
 }
+
+.accordion:hover .accordion__input:not(:checked) ~ .accordion__label {
+    color : #0a2240;
+}
