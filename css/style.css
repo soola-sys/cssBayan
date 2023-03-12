@@ -14,6 +14,13 @@ body {
     font-family: 'Sono', sans-serif;
 }
 
+.accordion {
+    overflow: hidden;
+    background: #ffffff;
+    border-radius: 5px;
+    text-align: left;
+}
+
 .container {
     width: 100%;
     max-width: 1140px;
@@ -30,12 +37,7 @@ body {
     color : #0a2240;
     border-bottom: 2px solid #b1c2d6;
 }
-.accordion {
-    overflow: hidden;
-    background: #ffffff;
-    border-radius: 5px;
-    text-align: left;
-}
+
 .accordion__item {
     box-shadow:  0 0 5px rgba(0, 0, 0, 0.1);
 }
@@ -66,17 +68,25 @@ body {
 .accordion__item:hover{
     background: rgba(0 , 0 , 0 , 0.1);
 }
-.accordion__content {
+ .accordion__content{
+    overflow: hidden;
+    visibility: hidden;
+    text-align: center;
     background: #ffffff;
-    line-height: 1.5;
     font-size: 0.80em;
-    display: none;
+    max-height: 0;
+    transition: max-height 0.5s , padding 0.5s;
 }
-.accordion__input:checked ~ .accordion__content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.accordion__content p {
+    padding: 10px;
 }
+
+.accordion__input:checked + label + .accordion__content {
+     max-height: 500px;
+     padding: 25px 10px 25px;
+     visibility: visible;
+}
+
 .accordion__input {
     display: none;
 }
