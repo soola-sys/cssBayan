@@ -38,22 +38,20 @@ body {
     border-bottom: 2px solid #b1c2d6;
 }
 
-.accordion__item {
-    box-shadow:  0 0 5px rgba(0, 0, 0, 0.1);
-}
 .accordion__label , .accordion__content {
     padding: 10px 10px;
 }
 
 .accordion__label {
     display: block;
-    color: #0a2240;
+    /* color: #0a2240; */
+    color: #cc071e;
     font-weight: 500;
     cursor: pointer;
     position: relative;
     transition: background 0.1s;
 }
-.accordion__label::after {
+ .accordion__label::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -64,7 +62,12 @@ body {
     background: url('data:image/svg+xml;utf8,<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 100,0 50,50" style="fill:black" /></svg>');
     background-size: contain;
     transition: transform 0.4s;
+    display: none;
 }
+.accordion:hover .accordion__label::after {
+    display: block;
+}
+
 .accordion__item:hover{
     background: rgba(0 , 0 , 0 , 0.1);
 }
@@ -96,4 +99,6 @@ body {
 }
 
 
-
+.accordion__input:checked ~ .accordion__label {
+    color : #0a2240;
+}
