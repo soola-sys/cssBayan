@@ -56,7 +56,7 @@ body {
     width: 2rem;
     height: 2rem;
     visibility: hidden;
-    transition: 0.5s linear all;
+    transition: 1s linear all;
 }
 
 
@@ -67,7 +67,7 @@ body {
     background: #ffffff;
     font-size: 0.80em;
     max-height: 0;
-    transition: all 0.5s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 .accordion__content p {
     padding: 0.2rem;
@@ -78,6 +78,11 @@ body {
 }
 .accordion__input:checked ~ .accordion__icon img{
     color : #0a2240;
+}
+
+.accordion__input:hover + label + .accordion__content {
+    max-height: 50vh;
+    visibility: visible;
 }
 
 @media (hover:hover) {
@@ -91,14 +96,15 @@ body {
         visibility: visible;
         transform: rotate(45deg);
     }
+ 
 }
 @media (max-width : 1920px) , (max-width : 900px) , (max-width : 420px){
 
     .accordion__input:checked + label + .accordion__content {
         max-height: 500px;
-        padding: 25px 10px 25px;
+        /* padding: 25px 10px 25px; */
         visibility: visible;
-   }
+    }
 }
 @media only screen and (max-width : 1920px){
     body {
