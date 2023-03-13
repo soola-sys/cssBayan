@@ -80,10 +80,7 @@ body {
     color : #0a2240;
 }
 
-.accordion__input:hover + label + .accordion__content {
-    max-height: 50vh;
-    visibility: visible;
-}
+
 
 @media (hover:hover) {
     .accordion__item:hover .img:hover{
@@ -95,6 +92,15 @@ body {
     .accordion:hover .accordion__icon img{
         visibility: visible;
         transform: rotate(45deg);
+    }
+
+    .accordion__input:hover + label + .accordion__content {
+        max-height: 50vh;
+        visibility: visible;
+    }
+    .accordion__item:hover + label + .accordion__content{
+        max-height: 50vh;
+        visibility: visible;
     }
  
 }
