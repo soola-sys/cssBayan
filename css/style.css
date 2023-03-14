@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    font-style: normal;
+    display: flex;
+    font-size: 1.5rem;
+    font-family: 'Sono', sans-serif;
+}
+
+.accordion {
+    overflow: hidden;
+    background: #ffffff;
+    border-radius: 0.20em;
+    text-align: left;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 50%;
+    padding: 0 0.2rem;
+    text-align: left;
+    margin-top: 5%;
+}
+
+.title {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 3rem;
+    color : #0a2240;
+    border-bottom: 0.08em solid #b1c2d6;
+}
+
+.accordion__label , .accordion__content {
+    padding: 0.3rem;
+}
+
+.accordion__label {
+    display: flex;
+    flex-direction: column;
+    /* color: #0a2240; */
+    color: #cc071e;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.accordion__label-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+ .accordion__icon img{
+    width: 2rem; 
+    height: 2rem;
+    visibility: hidden;
+    transition: 1s linear all;
+}
+
+ .img {
+    width: 30rem;
+    height: 30rem;
+}
+ .accordion__content {
+    overflow: hidden;
+    visibility: hidden;
+    text-align: center;
+    background: #ffffff;
+    font-size: 0.80em;
+    max-height: 0;
+    transition: all 1s ease-in-out;
+}
+.accordion__content p {
+    padding: 0.2rem;
+    cursor: pointer;
+}
+.accordion__input {
+    display: none;
+}
+.accordion__input:checked ~ .accordion__label{
+    color : #0a2240;
+}
+
+
+
+@media (hover:hover) {
+    .accordion__item:active .accordion__label{
+        color:wheat;
+    }
+    .accordion__item:active .accordion__icon img{
+        filter: invert(85%) sepia(52%) saturate(208%) hue-rotate(342deg) brightness(99%) contrast(94%);
+    }
+  
+    .accordion__item:active .accordion__content img{
+        opacity: 40%;
+    }
+    .accordion:hover .accordion__input:not(:checked) ~ .accordion__label {
+        color : #0a2240;
+    }
+    .accordion:hover .accordion__icon img{
+        visibility: visible;
+    }
+    .accordion__item:hover .accordion__icon img{
+        transform: rotate(45deg);
+    }
+
+    .accordion__item:hover label .accordion__content{
+        max-height: 50vh;
+        visibility: visible;
+    }
+ 
+}
+@media (max-width : 1920px) , (max-width : 900px) , (max-width : 420px){
+
+    .accordion__input:checked + .accordion__label .accordion__content{
+        max-height: 500px;
+        visibility: visible;
+    }
+}
+@media only screen and (max-width : 1920px){
+    body {
+        font-size: 2rem;
+    }
+   .container {
+    max-width: 1140px;
+   }
+}
+
+@media only screen and (max-width : 900px){
+     body {
+        font-size: 1.5rem;
+     }
+}
+
+@media only screen and (max-width : 420px){
+    body {
+       font-size: 1rem;
+    }
+    .accordion__icon img{
+        width: 1rem;
+        height: 1rem;
+    }
+    .title {
+        font-size: 1.6rem;
+     }
+}
+@media only screen and (max-width : 768px){
+    .accordion__content p img{
+        width: 25em;
+        height: 25em;    
+    }
+
+}
+@media only screen and (max-width : 540px){
+    .accordion__content p img{
+        width: 20em;
+        height: 20em;    
+    }
+
+}
